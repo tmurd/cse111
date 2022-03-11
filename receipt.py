@@ -1,6 +1,9 @@
 # Import CSV Modual
 import csv
 
+# Import DictWriter class from CSV module
+from csv import writer
+
 # Import the datetime class from the datetime
 # module so that it can be used in this program.
 from datetime import datetime
@@ -24,20 +27,34 @@ def main():
         # Use to insert into read_dict function
         product_dict = read_dict("products.csv", PRODUCT_NUMBER_INDEX)
 
-        #print_product_dict_neat(product_dict)
+        print_product_dict_neat(product_dict)
 
+        print()
+        forgot_item = input("Would you like to add any items to your cart (y/n)? ").lower()
+        while forgot_item == 'y':
+            print()
+            product_num = input("What product would you like to add to your request (D150)? ").capitalize()
+            num_product = int(input("How much of the product do you need? "))
+
+            add_item_to_request_file(product_num, num_product)
+            forgot_item = input("Would you like to add any items to your cart (y/n)? ").lower()
+
+        # Print store name
         print()
         print("Inkom Emporium")
 
         print()
         #print("Requested Items")
 
+        # Open and read the request.csv file
         with open("request.csv", "rt") as csv_file:
 
             reader = csv.reader(csv_file)
 
+            # Skip first line of file
             next(reader)
 
+            # Place holders for number of items and subtotal
             num_items = 0
             subtotal = 0
 
@@ -65,30 +82,36 @@ def main():
                 num_items += quantity
                 subtotal += price * quantity
 
+        # Calculate sales tax and total
         sales_tax = round(subtotal * 0.06,2)
         total = sales_tax + subtotal
 
+        # Totals listed
         print()
         print(f"Number of Items: {num_items}")
         print(f"Subtotal: {subtotal:.2f}")
         print(f"Sales Tax: {sales_tax}")
-        print(f"Total: {total}")
+        print(f"Total: {total:.2f}")
 
+        # Ending receipt information
         print()
         print("Thank you for shopping at Inkom Emporium")
         # Print the current day of the week and the current time.
         print(f"{current_date_and_time:%a %b  %w %X %Y}")
         print()
 
+    # Error message if file isn't found or permissions aren't given
     except (FileNotFoundError, PermissionError) as error:
         print("Error: missing file")
         print(error)
 
+    # Error message if there is an unknown product
     except (KeyError) as error:
         print()
         print(f"Error: unknown product ID in the request.csv file '{key}'")
         print()
 
+# Create dictionary
 def read_dict(filename, key_column_index):
     """Read the contents of a CSV file into a compound
     dictionary and return the dictionary.
@@ -126,11 +149,32 @@ def read_dict(filename, key_column_index):
     
     return dictionary
 
+# Make dictionary neat
 def print_product_dict_neat(product_dict):
     print()
     print("Products")
     for product_name, retail_price in product_dict.items():
         print("{} {}".format(product_name, retail_price))
+
+
+def add_item_to_request_file(product_num, num_product):
+    # List of column names 
+    list = [product_num, num_product]
+
+    # Open your CSV file in append mode
+    # Create a file object for this file
+    with open('request.csv', 'a', newline='') as csv_file:
+
+        # Pass the csv_file and a list 
+        # of the products
+        writer_object = writer(csv_file)
+
+        #Pass the list as an argument to the Writerow()
+        writer_object.writerow(list)
+
+        #Close the csv file
+        csv_file.close()
+  
 
 # Call main to start this program.
 if __name__ == "__main__":
