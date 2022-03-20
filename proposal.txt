@@ -9,19 +9,48 @@ supervisors know what we intend to do. Please answer each of the
 following questions to the best of your knowledge.)
 
 1. What is the title of your program?
+Iventory Management
 
 2. What real world problem will your program address or help to solve?
+There are organizations that have equipment or product that can be rented
+or barrowed for a time (ie. libraries, landscaping equipment, or movie 
+rentals). I want to create a program that keeps track of where an item is
+at.
+
 
 3. What will you learn from developing this program?
+I will learn how to better use dictionaries and lists when coding. I will 
+also learn how to handle user input to manipulate lists and dictionaries.
+I will also learn to use moduals and create functions that preform specific
+tasks. Finally, I will learn to write code that will generate a spreadsheet 
+for the user to display each inventory item and if the item is with someone
+or if it is available. 
 
 4. What Python modules will your program use? (Some examples are: csv,
 datetime, functools, matplotlib, math, pandas, pytest, random, requests,
 and tkinter.)
+- csv
+- datetime
+- pytest
+- os
 
 5. Will you separate your Python program into functions that each
 perform a single task?
+Yes. 
+Possible Functions:
+- main()
+- check_in_product(product, quantity, name)
+- check_out_product(product, quantity, name)
+- read_dictionary_from_csv(filename, key_column_index)
+
 
 6. Will you write test functions to test many of your program functions?
+Yes. 
+Possible Tests:
+- assert removing and adding items
+- assert read == line
+- assert lines == written
+- assert matches pattern
 
 (Remember that it's hard to test functions that get user input and print
 output. It's easy to test functions that don't get user input and don't
