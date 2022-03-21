@@ -9,7 +9,7 @@ supervisors know what we intend to do. Please answer each of the
 following questions to the best of your knowledge.)
 
 1. What is the title of your program?
-Iventory Management
+Iventory Check-In & Check-Out
 
 2. What real world problem will your program address or help to solve?
 There are organizations that have equipment or product that can be rented
