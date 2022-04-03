@@ -1,0 +1,26 @@
+{
+    "A001": {
+        "description": "TV",
+        "quantity": 5
+    },
+    "B001": {
+        "description": "Chalk and Eraser",
+        "quantity": 12
+    },
+    "B002": {
+        "description": "Dry Erase Marker and Eraser",
+        "quantity": 12
+    },
+    "C001": {
+        "description": "Bible",
+        "quantity": 15
+    },
+    "C002": {
+        "description": "Book of Mormon",
+        "quantity": 15
+    },
+    "D001": {
+        "description": "Art Folder",
+        "quantity": 5
+    }
+}
