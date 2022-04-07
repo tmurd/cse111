@@ -1,0 +1,40 @@
+Please respond thoroughly (at least two sentences for each question) to
+the following three questions.
+
+1. Describe an experience you had this semester where you saw the power of
+functions.
+
+I think I saw the power of funcitons most prevelent in our scene.py 
+assignement. In this assignment, I utilized specific funcations that each
+had a specfic task it would preform. After creating a specific task to
+preform, I'll I had to do was pass through cordinates and the function 
+would take care of the rest. This meant I could draw multiple objects in
+different places without the need to create a new block of code everytime
+I wanted to draw objects in deifferent places.
+
+2. In your judgment, what is the value of test functions?
+
+Test functions are tricky and sometimes feel tetious to write. However, I
+think test functions are very valuable because they help you to make sure
+each block of code runs properly depending on many different circumstances.
+The test code can then pinpoint the specific error and help you to better
+fix it. I think test code would be especially usefull in larger coding
+projects because it would allow you to catch errors and fix them quicker
+than if test code had not been written.
+
+
+3. Describe your process for troubleshooting and fixing a program that
+has a problem. What is one thing you can do to improve your process?
+
+I often troubleshoot code by running it or running test code. If errors
+appear during this testing phase, then I try to read the error and see if
+I know how to fix it off the top of my mind. If I cannot identify the
+error initailly, then I usually google the error and see if anyone has
+posted a solution. Sometimes, I go deeper using the debug feature to see
+exactly what the computer is doing. One thing I think I could do to
+improve my troubleshooting and fixing process is to write test code 
+alongside each function as I go. I also think I should use the debug
+feature more often and from the begining because sometimes I wait until
+later and I could've understood the issue sooner. Finally, writing
+exception statements may help me to pinpoint errors quicker. I definently
+need more practice though.
