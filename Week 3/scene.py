@@ -22,7 +22,7 @@ def main():
     draw_ground(canvas, scene_width, scene_height)
 
     # Un-comment this code to draw grid over scene to help place objects
-    # draw_grid(canvas, scene_width, scene_height, 50, color="deepPink3")
+    draw_grid(canvas, scene_width, scene_height, 50, color="deepPink3")
 
 
     # Call the finish_drawing function

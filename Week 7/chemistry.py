@@ -288,9 +288,9 @@ def compute_molar_mass(symbol_quantity_list, periodic_table_dict):
         # Add the product into the total mass.
         total_mass += total
 
-
     # Return the total mass.
     return total_mass
+
 def make_molecules_dict():
     known_molecules_dict = {
         "Al2O3": "aluminum oxide",
